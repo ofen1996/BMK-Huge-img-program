@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>847</width>
+    <height>581</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_main">
+    <item row="0" column="1">
+     <widget class="QWidget" name="widget_right" native="true">
+      <layout class="QGridLayout" name="gridLayout_9">
+       <item row="1" column="1">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QScrollArea" name="left_scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>410</width>
+         <height>519</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QToolBox" name="toolBox">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <property name="tabSpacing">
+           <number>6</number>
+          </property>
+          <widget class="QWidget" name="page_file">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>392</width>
+             <height>449</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>芯片区域手工识别</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <property name="leftMargin">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QWidget" name="widget_2" native="true">
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <item>
+                <widget class="QPushButton" name="load_he_pic">
+                 <property name="text">
+                  <string>加载HE图片</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,2">
+                 <item>
+                  <widget class="QLabel" name="label_2">
+                   <property name="text">
+                    <string>芯片型号：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Smode">
+                   <item>
+                    <property name="text">
+                     <string>S1000</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>S3000</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>S2000</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>S2000-2</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,2">
+                 <item>
+                  <widget class="QLabel" name="label">
+                   <property name="text">
+                    <string>显示通道：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox">
+                   <item>
+                    <property name="text">
+                     <string>RGB</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>R</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>G</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>B</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,2">
+                 <item>
+                  <widget class="QLabel" name="label_5">
+                   <property name="text">
+                    <string>标准间距：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="comboBox_std_d">
+                   <property name="text">
+                    <string>auto</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QGridLayout" name="gridLayout_4">
+                 <item row="2" column="1">
+                  <widget class="QPushButton" name="bnt_right_bottom">
+                   <property name="text">
+                    <string>右下</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QPushButton" name="bnt_left_bottom">
+                   <property name="text">
+                    <string>左下</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QPushButton" name="bnt_right_top">
+                   <property name="text">
+                    <string>右上</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QPushButton" name="bnt_left_top">
+                   <property name="text">
+                    <string>左上</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QPushButton" name="save_chip_rect">
+                 <property name="text">
+                  <string>保存区域</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="stitch_chip">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>缝合并裁剪</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="new_stitch_channel">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>依据底板缝合</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="correct_whole">
+                 <property name="text">
+                  <string>全图校准(需先裁剪)</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_7">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="correct_match_result">
+              <property name="text">
+               <string>二分镜缝合校正</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="page_chip_region">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>392</width>
+             <height>449</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>芯片区域自动识别</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <property name="leftMargin">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="auto_reg_chip_region">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>自动识别启动</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>847</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionxxxx">
+   <property name="text">
+    <string>xxxx</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>auto_reg_chip_region</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>auto_reg_chip_region_cao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>115</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>332</x>
+     <y>91</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bnt_left_top</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>collect_point_left_top_cao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>204</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>332</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bnt_left_bottom</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>collect_point_left_bottom_cao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>192</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>334</x>
+     <y>288</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>load_he_pic</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_he_img_cao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>148</x>
+     <y>98</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>334</x>
+     <y>170</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bnt_right_bottom</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>collect_point_right_bottom_cao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>387</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>322</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bnt_right_top</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>collect_point_right_top_cao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>387</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>save_chip_rect</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>save_chip_region_rect_cao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>268</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>332</x>
+     <y>369</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stitch_chip</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>stitch_chip_cao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>305</x>
+     <y>297</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>498</x>
+     <y>339</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>correct_whole</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>correct_whole_cao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>251</x>
+     <y>355</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>423</x>
+     <y>290</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>choose_channel_show_cao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>387</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>423</x>
+     <y>290</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>new_stitch_channel</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>new_stitch_channel_cao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>244</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>423</x>
+     <y>290</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>correct_match_result</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>correct_match_result_cao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>233</x>
+     <y>399</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>423</x>
+     <y>290</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_Smode</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>change_Smode_cao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>271</x>
+     <y>115</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>423</x>
+     <y>290</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_std_d</sender>
+   <signal>editingFinished()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>change_std_d_cao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>271</x>
+     <y>169</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>423</x>
+     <y>290</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>auto_reg_chip_region_cao()</slot>
+  <slot>open_he_img_cao()</slot>
+  <slot>collect_point_left_top_cao()</slot>
+  <slot>collect_point_right_top_cao()</slot>
+  <slot>collect_point_right_bottom_cao()</slot>
+  <slot>collect_point_left_bottom_cao()</slot>
+  <slot>save_chip_region_rect_cao()</slot>
+  <slot>stitch_chip_cao()</slot>
+  <slot>correct_whole_cao()</slot>
+  <slot>choose_channel_show_cao()</slot>
+  <slot>new_stitch_channel_cao()</slot>
+  <slot>correct_match_result_cao()</slot>
+  <slot>change_std_d_cao()</slot>
+  <slot>change_Smode_cao()</slot>
+ </slots>
+</ui>
