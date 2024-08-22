@@ -2,11 +2,39 @@ import os, sys
 import time
 import argparse
 import torch
-import torchvision
+# import torchvision
+# from mmcv.ops import nms
 import cv2
 from need.ofen_tool import show_img, save_json
 
 DETECT_TYPE = ["kp"]
+
+
+def nms(boxes, scores, iou_threshold):
+    keep = []
+    _, indices = scores.sort(descending=True)
+    while indices.numel() > 0:
+        max_index = indices[0]
+        keep.append(max_index)
+        if indices.numel() == 1:
+            break
+        ious = box_iou(boxes[max_index, :].unsqueeze(0), boxes[indices[1:], :]).squeeze()
+        indices = indices[1:][ious <= iou_threshold]
+    return torch.tensor(keep)
+
+def box_iou(box1, box2):
+    area1 = (box1[:, 2] - box1[:, 0]) * (box1[:, 3] - box1[:, 1])
+    area2 = (box2[:, 2] - box2[:, 0]) * (box2[:, 3] - box2[:, 1])
+
+    lt = torch.max(box1[:, None, :2], box2[:, :2])
+    rb = torch.min(box1[:, None, 2:], box2[:, 2:])
+
+    wh = (rb - lt).clamp(min=0)
+    inter = wh[:, :, 0] * wh[:, :, 1]
+
+    union = area1[:, None] + area2 - inter
+
+    return inter / union
 
 
 def scale_boxes(img1_shape, boxes, img0_shape, ratio_pad=None):
@@ -139,7 +167,7 @@ def non_max_suppression(
         # Batched NMS
         c = x[:, 5:6] * (0 if agnostic else max_wh)  # classes
         boxes, scores = x[:, :4] + c, x[:, 4]  # boxes (offset by class), scores
-        i = torchvision.ops.nms(boxes, scores, iou_thres)  # NMS
+        i = nms(boxes, scores, iou_thres)  # NMS
         if i.shape[0] > max_det:  # limit detections
             i = i[:max_det]
         # if merge and (1 < n < 3E3):  # Merge NMS (boxes merged using weighted mean)

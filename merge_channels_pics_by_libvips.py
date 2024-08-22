@@ -3,16 +3,18 @@ import sys
 import time
 
 import numpy as np
-from PIL import Image
+# from PIL import Image
 import os
-import tifffile
-import tiffslide
-import cv2
-from need.ofen_tool import show_img
-
-vipsbin = r'D:\work\python\vips-dev-8.15\bin'
-os.environ['PATH'] = vipsbin + ';' + os.environ['PATH']
+# import tifffile
+# import tiffslide
+# import cv2
+# from need.ofen_tool import show_img
+import platform
+if platform.system() == 'Windows':
+    vipsbin = r'D:\work\python\vips-dev-8.15\bin'
+    os.environ['PATH'] = vipsbin + ';' + os.environ['PATH']
 import pyvips
+pyvips.leak_set(True)
 import openslide
 ## 海德星的小图拼接成大图
 
@@ -117,8 +119,8 @@ def generate_whole_tif(pics_dirs, save_path=None, compression='jpeg'):
     whole_img.set_type(pyvips.GValue.gint_type, "tiles_height", img_width)
 
     # whole_img.tiffsave(save_path, compression=compression, tile=True,
-    #                     tile_width=512, tile_height=512, Q=90,
-    #                     pyramid=True)
+    #                    tile_width=512, tile_height=512, Q=90,
+    #                    pyramid=True)
     save_pyramid_tif(whole_img, save_path, compression=compression)
     t3 = time.time()
     print(f"Saving pyramid cost {t3-t2} s")
@@ -143,7 +145,7 @@ if __name__ == '__main__':
     #     raise Exception("need save path")
 
     save_path = generate_whole_tif(img_dir, save_path=save_path)
-    slide = openslide.open_slide(save_path)
-    a = pyvips.Image.new_from_file(save_path)
-    print(slide.level_dimensions)
+    # slide = openslide.open_slide(save_path)
+    # a = pyvips.Image.new_from_file(save_path)
+    # print(slide.level_dimensions)
     print(f"{img_dir} has done, save path {save_path}")

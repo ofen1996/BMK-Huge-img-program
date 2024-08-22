@@ -54,7 +54,7 @@ def save_pyramid_tif(im, save_path, compression="jpeg",  tile_width=512, tile_he
 
     im.tiffsave(save_path, compression=compression, tile=True,
                 tile_width=tile_width, tile_height=tile_height,
-                pyramid=True, properties=True)
+                pyramid=True, properties=True, bigtiff=True)
 
 
 def get_property_value(im, property_name):

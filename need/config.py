@@ -97,6 +97,11 @@ class Config:
             self.barcode_size_y = 51
             self.base_size_x = 42
             self.base_size_y = 43
+        elif self.base_mode == "huge":
+            self.barcode_size_x = 45
+            self.barcode_size_y = 51
+            self.base_size_x = 311
+            self.base_size_y = 381
 
 
 
