@@ -1,0 +1,11 @@
+# Core numerical and image-processing stack
+numpy
+opencv-python
+tifffile
+Pillow
+scikit-learn
+
+# Model inference and large-image processing
+onnxruntime
+torch
+pyvips
