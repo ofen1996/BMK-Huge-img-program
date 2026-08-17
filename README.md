@@ -1,10 +1,11 @@
 # Large-Scale Image Alignment and Stitching
 
 A Python computer-vision prototype for array localisation, geometric registration, and multi-channel merging on high-resolution images. It combines ONNX keypoint detection, regular-grid templates, and libvips processing for memory-conscious large-image workflows.
+
 <table>
   <tr>
-    <td align="center">tile images<br><img width="430" src="xxx"></td>
-    <td align="center">whole image<br><img width="430" src="xxx"></td>
+    <td><img width="430" alt="tile_images" src="https://github.com/user-attachments/assets/34fd8a46-9cff-4b91-be82-efbddfe0013c"></td>
+    <td><img width="430" alt="whole_image" src="https://github.com/user-attachments/assets/4f02d9fc-4936-408a-83d3-3aee9c983bf1"></td>
   </tr>
 </table>
 
